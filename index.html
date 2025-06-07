@@ -14,6 +14,11 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/partyHorn.js" type="module"></script>
+  <style>
+  .blue {
+    background-color: #87ceeb; /* light blue */
+  }
+</style>
 </head>
 
 <body>
@@ -42,6 +47,14 @@
       <audio class="hidden" src=""></audio>
     </section>
   </main>
+  <script>
+  const randomNumber = Math.random();
+  const shouldApplyClass = randomNumber < 0.5;
+  let body = document.querySelector('body');
+  if (shouldApplyClass) {
+    body.classList.add('blue');
+  }
+</script>
 </body>
 
 </html>
